@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../services/api.service';
 import { MatDialog, MatDialogRef } from "@angular/material/dialog";
-import { Product } from '../models/product.model';
 import { EditDialogComponent } from './edit-dialog/edit-dialog.component';
 import { DeleteDialogComponent } from './delete-dialog/delete-dialog.component';
 import { AddDialogComponent } from './add-dialog/add-dialog.component';
@@ -13,7 +12,7 @@ import { AddDialogComponent } from './add-dialog/add-dialog.component';
 })
 export class HomeComponent implements OnInit {
 
-  products: Product[];
+  products: any[];
   breakpoint: Number;
 
   constructor(
