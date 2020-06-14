@@ -1,5 +1,10 @@
 # product-web
 
+Project build with:
+
+- [Angular 8 CLI](https://cli.angular.io/)
+- [Angular Material](https://material.angular.io/) for Components
+
 Running in `http://localhost:4200/`
 
 ## Requirements
