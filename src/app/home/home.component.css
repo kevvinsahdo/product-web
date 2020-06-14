@@ -1,0 +1,19 @@
+
+.products-container {
+    max-width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.product-card {
+    max-width: 250px;
+    margin: 1em;
+}
+
+.add-product-button {
+  top: auto;
+  right: 20px;
+  bottom: 20px;
+  left: auto;
+  position: absolute;
+}

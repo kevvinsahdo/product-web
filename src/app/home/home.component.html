@@ -1,0 +1,38 @@
+<div class="products-container">
+    <mat-grid-list [cols]="breakpoint" rowHeight="500px"
+        (window:resize)="onResize($event)">
+        <mat-grid-tile class="product-grid-tile" *ngFor="let product of
+            products">
+            <mat-card class="product-card">
+                <mat-card-header>
+                    <mat-card-title>
+                        {{ product.name }}
+                    </mat-card-title>
+                </mat-card-header>
+                <img mat-card-image class="product-img"
+                    src="{{product.imageUrl}}"
+                    alt="{{product.name}}">
+                <mat-card-content>
+                    <b>R$ {{product.value | number: '1.2-2'}}</b>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-icon-button color="black" (click)="openEditDialog(product)">
+                        <mat-icon>
+                            edit
+                        </mat-icon> 
+                    </button>
+                    <button mat-icon-button color="warn" (click)="openDeleteDialog(product)">
+                        <mat-icon>
+                            delete
+                        </mat-icon>
+                    </button>
+                </mat-card-actions>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
+<button mat-fab class="add-product-button"
+    (click)="openAddDialog()"
+    aria-label="Add product">
+    <mat-icon>add</mat-icon>
+</button>
