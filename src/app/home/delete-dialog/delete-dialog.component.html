@@ -1,0 +1,23 @@
+<H2>Você deseja realmente deletar esse produto?</H2>
+<div mat-dialog-content>
+    <div class="product-container">
+        <mat-card class="product-card">
+            <mat-card-header>
+                <mat-card-title>
+                    {{ product.name }}
+                </mat-card-title>
+            </mat-card-header>
+            <img mat-card-image class="product-img" src="{{product.imageUrl}}"
+                alt="{{product.name}}">
+            <mat-card-content>
+                <b>R$ {{product.value | number: '1.2-2'}}</b>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
+<div mat-dialog-actions>
+    <button mat-raised-button color="warn" (click)="delete()"> Deletar
+    </button>
+    <button mat-raised-button (click)="close()"> Cancelar
+    </button>
+</div>

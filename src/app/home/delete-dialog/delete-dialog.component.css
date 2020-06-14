@@ -1,0 +1,14 @@
+.product-card {
+    max-width: 250px;
+    margin: 1em;
+}
+
+h1 {
+    width: 25vw;
+}
+
+.product-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
