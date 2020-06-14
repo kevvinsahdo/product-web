@@ -1,0 +1,40 @@
+<div class="dialog-container">
+    <h1>Criar</h1>
+    <div mat-dialog-content [formGroup]="addForm">
+        <mat-form-field class="form-field">
+            <mat-label>
+                Nome
+            </mat-label>
+            <input matInput formControlName="name" type="text">
+            <mat-error *ngIf="form.name.errors">
+                Required field
+            </mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="form-field">
+            <mat-label>
+                Valor
+            </mat-label>
+            <input matInput data-ma type="number" formControlName="value">
+            <mat-error *ngIf="form.value.errors">
+                Required field
+            </mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="form-field">
+            <mat-label>
+                Imagem
+            </mat-label>
+            <textarea matInput type="url" formControlName="imageUrl"></textarea>
+            <mat-error *ngIf="form.imageUrl.errors">
+                Required field
+            </mat-error>
+        </mat-form-field>
+    </div>
+    <div mat-dialog-actions>
+        <button mat-raised-button color="accent" (click)="save()"> Salvar
+        </button>
+        <button mat-raised-button color="warn" (click)="close()"> Cancelar
+        </button>
+    </div>
+</div>
