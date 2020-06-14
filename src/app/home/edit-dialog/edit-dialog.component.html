@@ -1,0 +1,43 @@
+<div class="dialog-container">
+    <h1>Editar</h1>
+    <div mat-dialog-content [formGroup]="editForm">
+        <mat-form-field class="form-field">
+            <mat-label>
+                Nome
+            </mat-label>
+            <input matInput formControlName="name" type="text"
+                [value]="product.name">
+            <mat-error *ngIf="form.name.errors">
+                Required field
+            </mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="form-field">
+            <mat-label>
+                Valor
+            </mat-label>
+            <input matInput type="number" formControlName="value"
+                [value]="product.value">
+            <mat-error *ngIf="form.value.errors">
+                Required field
+            </mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="form-field">
+            <mat-label>
+                Imagem
+            </mat-label>
+            <textarea matInput type="url" formControlName="imageUrl"
+                [value]="product.imageUrl"></textarea>
+            <mat-error *ngIf="form.imageUrl.errors">
+                Required field
+            </mat-error>
+        </mat-form-field>
+    </div>
+    <div mat-dialog-actions>
+        <button mat-raised-button color="accent" (click)="save()"> Salvar
+        </button>
+        <button mat-raised-button color="warn" (click)="close()"> Cancelar
+        </button>
+    </div>
+</div>
